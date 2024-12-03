@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+body{
+    background-color: #f1f6fc31;
+}
+section,
+footer {
+    padding: 54px 0;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: #0000009c;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+    animation: animate-outline 1s ease infinite;
+}
+.btn:hover{
+    background-color: #3580db;
+    animation: animate-outline 1s ease forwards;
+}
+.btncontato{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+    animation: animate-outline 1s ease infinite;
+}
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #4f9bf98a
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+    }
+}
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: #4f9cf9;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+nav .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+.banner .banner-text h1{
+    font-size: 96px;
+    color: white;
+}
+.banner .banner-text p{
+    font-size: 30px;
+    color: #ffffffb7;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    text-align: center;
+}
+.footer div{
+    margin: 0 2%;
+}
+.footer .Desenvolvido{
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 1.6rem;
+}
+.footer p{
+    color: rgb(229, 229, 229);
+    margin-top: 10px;
+}
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: #000000a6;
+}
+.sobre .sobre-img{
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 50%;
+    border-radius: 10px;
+}
+.servicos h3{
+    text-align: center;
+}
+.servicos h4{
+    text-align: center;
+    font-size: 40px;
+}
+.servicos .container >p{
+    text-align: center;
+}
+.servicos .rows-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.servicos .row-card-item{
+    background-color: rgb(79, 79, 79);
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+}
+.servicos .row-card-item img{
+    width: 100%; 
+    border-radius: 5%;
+}
+.servicos .row-card-item p{
+    color: white;
+    margin-top: 10px;
+}
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contato-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contato-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+.contato-info .left-side p{
+    font-size: 17px;
+    color: white;
+}
+.contato-info .right-side{
+    width: 50%;
+}
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid gray;
+    color: #212121;
+    font-weight: lighter;
+}
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+    border-color: #4f9cf9;
+}
+.contato-info .right-side textarea{
+    border: 1px solid gray;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.contato-info .right-side button{
+    border: none;
+}
+.footer.left-side-footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer .left-side-footer div{
+    display: flex;
+    align-items: center;
+}
+.footer .left-side-footer div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+.footer .left-side-footer p{
+    font-size: 17px;
+    color: white;
+}
+@media(max-width: 830px){
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: gray;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+    .ul.open{
+        clip-path: circle(141.4% at 100% 0);
+    }
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+    .banner .banner-text{
+        padding: 0;
+        margin: 80px;
+    }
+    .banner .banner-text h1{
+        font-size: 80px;
+    }
+    .banner .banner-text p{
+        font-size: 15px;
+    }
+    .sobre .container{
+        flex-direction: column-reverse;
+    }
+    .sobre .sobre-text{
+        width: 100%;
+    }
+    .contato .contato-info{
+        flex-direction: column-reverse;
+    }
+    .contato-info .right-side,
+    .contato-info .left-side{
+        width: 100%;
+    }
+    .contato-info .right-side{
+        margin-bottom: 30px;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer .left-side-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4%;
+    }
+}
+@media(max-width: 500px) {
+    .banner .banner-tex{
+        font-size: 50px;
+    }
+}
+
+.Login{
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.LoginDiv{
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+}
+.loginin{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.buttonlogin{
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.buttonlogin:hover{
+    background-color: deepskyblue;
+}
+.Cadastro{
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.box{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+}
+fieldset{
+    border: 3px solid gray;
+}
+legend{
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    background-color: gray;
+    border-radius: 8px;
+}
+.inputBox{
+    margin-left: 10px;
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 96%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: white;
+}
+#submit{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #4f9cf9;
+    width: 95%;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: #3580db;
+}
+#update{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #4f9cf9;
+    width: 95%;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#update:hover{
+    background-color: #3580db;
+}
+.table{
+    overflow: visible;
+    table-layout: auto;
+    margin: 20px auto;
+    width: 90%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.table thead th {
+    white-space: normal;
+    word-wrap: break-word;
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+.table tbody td {
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.td:nth-child(4) {
+    width: 50%;
+}
+.table tbody tr:hover {
+    background-color: #e0f7fa;
+    transition: background-color 0.3s ease;
+}
+.table tbody td:last-child {
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .table{
+        font-size: 12px;
+    }
+}
